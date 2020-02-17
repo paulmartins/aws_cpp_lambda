@@ -1,34 +1,50 @@
 # C++ runtime for AWS lambda
 
+Repo containing the Dockerfile of my image used to build AWS Lambda running c++.
+
+Subfolders structure
+ |- cpp_tuto
+ |- boost_tuto
+
+
 ## Docker
 
-To build the docker image, run the following in the repo root dir.
+To pull the docker image from dockerhub
 
 ```
-docker build . -t aws_cpp_docker
+docker pull ppjmartins/aws_cpp_lambda:latest
 ```
 
-To pull the image from dockerhub, run
+To build the docker image
 
 ```
-
+docker build -t ppjmartins/aws_cpp_lambda:latest .
 ```
 
-To push the image to dockerhub, run
+To push a new tagged image to dockerhub
 
 ```
-docker push ppjmartins/lambda_cpp_boost:latest
+docker push ppjmartins/aws_cpp_lambda:latest
 ```
 
 
 ## C++ Tutorial
 
-Jump inside the container and attached a volume so we can interact with it
+Run the image and attach a volume so we can interact with it.
+Once inside the container, move to the `cpp_tuto` folder.
 
 ```
-docker run --rm -ti --name=aws_cpp_docker  -v $PWD/cpp_tuto:/cpp_tuto aws_cpp_docker /bin/bash
+docker run --rm -ti --name=aws_cpp_lambda  -v $PWD/cpp_tuto:/cpp_tuto ppjmartins/aws_cpp_lambda:latest /bin/bash
+cd cpp_tuto
 ```
 
-1. 
+## Boost Graph Tutorial
 
-## Boost Graph Introduction
+Similarly to the c++ tutorial, run the aws_cpp_lambda image and once inside the container move to `boost_tuto`.
+
+```
+docker run --rm -ti --name=aws_cpp_lambda  -v $PWD/boost_tuto:/boost_tuto ppjmartins/aws_cpp_lambda:latest /bin/bash
+cd boost_tuto
+```
+
+

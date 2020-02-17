@@ -15,8 +15,12 @@ RUN git clone https://github.com/awslabs/aws-lambda-cpp.git && \
 # Pre-Req Repos
 RUN yum install boost-devel -y
 
+# Copy files for tutorials
+COPY ./cpp_tuto ./cpp_tuto
+COPY ./boost_tuto ./boost_tuto
+
 # Define working directory
-WORKDIR "/cpp_tuto"
+# WORKDIR "/cpp_tuto"
 
 # include C++ source code and build configuration
 # ADD adaptiveUpdate.cpp /adaptiveUpdate
