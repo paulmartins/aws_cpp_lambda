@@ -31,8 +31,7 @@ int main()
 
     // However the sum cannot: 333,383,335,000 > max_int = 2,147,483,648
     // This is an integer overflow !
-    // An unhandled arithmetic overflow in the engine steering software was 
-    // the primary cause of the crash of the maiden flight of the Ariane 5 rocket. 
+    // (cause of the crash of the maiden flight of the Ariane 5 rocket) 
     // The software had been considered bug-free since it had been used in many 
     // previous flights; but those used smaller rockets which generated smaller 
     // accelerations than Ariane 5's.
@@ -40,7 +39,7 @@ int main()
     std::cout << "Sum of squares up to 10000 = " << sum10000 << std::endl;
 
     // A single array element doesn't have enough memory allocated to it to save the number
-    // Segmentation Fault 
+    // Segmentation Fault !
     long int sum10000000 = array_sum(10000000);
     std::cout << "Sum of squares up to 10000000 = " << sum10000000 << std::endl;
 

@@ -2,10 +2,11 @@
 
 Repo containing the Dockerfile of my image used to build AWS Lambda running c++.
 
+```
 Subfolders structure
  |- cpp_tuto
  |- boost_tuto
-
+```
 
 ## Docker
 
@@ -34,7 +35,7 @@ Run the image and attach a volume so we can interact with it.
 Once inside the container, move to the `cpp_tuto` folder.
 
 ```
-docker run --rm -ti --name=aws_cpp_lambda  -v $PWD/cpp_tuto:/cpp_tuto ppjmartins/aws_cpp_lambda:latest /bin/bash
+docker run --rm -ti --name=aws_cpp_lambda  -v $PWD/cpp_tuto:/cpp_tuto ppjmartins/aws_cpp_lambda:latest /bin/bash;
 cd cpp_tuto
 ```
 
@@ -43,7 +44,7 @@ cd cpp_tuto
 Similarly to the c++ tutorial, run the aws_cpp_lambda image and once inside the container move to `boost_tuto`.
 
 ```
-docker run --rm -ti --name=aws_cpp_lambda  -v $PWD/boost_tuto:/boost_tuto ppjmartins/aws_cpp_lambda:latest /bin/bash
+docker run --rm -ti --name=aws_cpp_lambda  -v $PWD/boost_tuto:/boost_tuto ppjmartins/aws_cpp_lambda:latest /bin/bash;
 cd boost_tuto
 ```
 
