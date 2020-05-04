@@ -1,3 +1,5 @@
+![Repo img](image.png)
+
 # C++ runtime for AWS lambda
 
 Repo containing the Dockerfile of my image used to build AWS Lambda running c++.
